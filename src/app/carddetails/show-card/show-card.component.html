@@ -1,1 +1,22 @@
-<p>show-card works!</p>
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th>CardType</th>
+      <th>CardNumber</th>
+      <th>CardHolderName</th>
+      <th>CVV</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let dataItem of CardList">
+      <td>{{dataItem.CardType}}</td>
+      <td>{{dataItem.CardNumber}}</td>
+      <td>{{dataItem.CardHolderName}}</td>
+      <td>{{dataItem.CVV}}</td>
+      <td><button type="button" class="btn btn-light mr-1">Edit</button></td>
+      <td><button type="button" class="btn btn-light mr-1">Delete</button></td>
+
+
+    </tr>
+  </tbody>
+  </table>

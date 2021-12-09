@@ -8,7 +8,7 @@
 </head>
 <body>
 
-
+<!-- NavigationBar -->
   <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
     <a class="navbar-brand" href="#">Password Vault 2.0</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
@@ -47,8 +47,7 @@
   </nav>
 
 
-
-
+<!-- Cards -->
 <div class="container">
 
   <div class="row">
@@ -57,9 +56,9 @@
         <div class="card-body">
           <h5 class="card-title">TYPES</h5>
           <p class="card-text"></p>
-          <ul><button type="button" class="btn btn-light" href="#link">login</button>
+          <ul><button type="button" class="btn btn-light" routerLink="login">login</button>
           </ul>
-          <ul><button type="button" class="btn btn-light" href="#link">cards</button>
+          <ul><button type="button" class="btn btn-light" routerLink="carddetails">cards</button>
           </ul>
         </div>
       </div>
@@ -68,7 +67,15 @@
       <div class="card">
 
         <div class="card-body">
-          <h5 class="card-title">MY VAULT<a href="#" class="btn btn-primary position-absolute top-20 end-0">ADD+</a></h5>
+          <h5 class="card-title">MY VAULT
+            <div class="btn-group position-absolute top-20 end-0">
+            <button  class="btn btn-success " routerLink="addlogin" data-bs-target="#LoginAddForm" data-bs-toggle="modal">
+            ADD LOGIN
+          </button>
+             <a  class="btn btn-warning position-0" data-bs-toggle="modal" data-bs-target="#CardAddForm" routerLink="addcard">
+              ADD CARD</a>
+            </div>
+          </h5>
           <hr>
           <p class="card-text"></p>
 
@@ -87,6 +94,12 @@
   </div>
 
 </div>
+
+
+
+
+
+
 
 <router-outlet></router-outlet>
 

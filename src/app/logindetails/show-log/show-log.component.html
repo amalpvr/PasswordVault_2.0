@@ -1,1 +1,22 @@
-<p>show-log works!</p>
+<table class="table table-striped">
+<thead>
+  <tr>
+    <th>Username</th>
+    <th>Password</th>
+    <th>WebsiteUrl</th>
+    <th>WebsiteName</th>
+  </tr>
+</thead>
+<tbody>
+  <tr *ngFor="let dataItem of LoginList">
+    <td>{{dataItem.Username}}</td>
+    <td>{{dataItem.Password}}</td>
+    <td>{{dataItem.WebsiteUrl}}</td>
+    <td>{{dataItem.WebsiteName}}</td>
+    <td><button type="button" class="btn btn-light mr-1">Edit</button></td>
+    <td><button type="button" class="btn btn-light mr-1">Delete</button></td>
+
+
+  </tr>
+</tbody>
+</table>
