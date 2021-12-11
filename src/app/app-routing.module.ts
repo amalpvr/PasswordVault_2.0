@@ -1,4 +1,5 @@
-import { DelLogComponent } from './logindetails/del-log/del-log.component';
+import { GeneratorComponent } from './generator/generator.component';
+
 import { AddEditLogComponent } from './logindetails/add-edit-log/add-edit-log.component';
 import { LogindetailsComponent } from './logindetails/logindetails.component';
 import { NgModule, Component } from '@angular/core';
@@ -12,7 +13,8 @@ const routes: Routes = [
   {path:'carddetails',component:CarddetailsComponent},
   {path:'addlogin',component:AddEditLogComponent},
   {path:'addcard',component:AddEditCardComponent},
-  {path:'editlogin',component:DelLogComponent}
+
+  {path:'gen',component:GeneratorComponent}
 
 ];
 
