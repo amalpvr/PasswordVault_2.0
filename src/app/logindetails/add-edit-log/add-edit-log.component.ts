@@ -2,6 +2,7 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { SharedService } from 'src/app/shared.service';
 
+
 @Component({
   selector: 'app-add-edit-log',
   templateUrl: './add-edit-log.component.html',

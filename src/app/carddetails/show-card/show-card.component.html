@@ -1,3 +1,41 @@
+<div class="btn-group position-absolute top-20 end-0">
+  <button  class="btn btn-warning position-0" data-bs-toggle="modal" data-bs-target="#CardAddForm" routerLink="addcard"
+  (click)="addClick()">
+  ADD CARD
+</button>
+
+  </div>
+
+<!--Modal-->
+
+<div class="modal fade" id="CardAddForm" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+
+        <form action="">
+          <div class="modal-header">
+            <h5 class="modal-title">Card Details</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" (click)="closeClick()"></button>
+          </div>
+
+          <app-add-edit-card [car]="car" *ngIf="ActivateAddEditComp">
+
+          </app-add-edit-card>
+
+
+
+
+
+
+      </form>
+    </div>
+  </div>
+</div>
+
+
+<!--tABLE-->
+
+
 <table class="table table-striped">
   <thead>
     <tr>
@@ -13,8 +51,8 @@
       <td>{{dataItem.CardNumber}}</td>
       <td>{{dataItem.CardHolderName}}</td>
       <td>{{dataItem.CVV}}</td>
-      <td><button type="button" class="btn btn-light mr-1">Edit</button></td>
-      <td><button type="button" class="btn btn-light mr-1">Delete</button></td>
+      <td><button type="button" class="btn btn-light mr-1" data-bs-toggle="modal" data-bs-target="#CardAddForm" (click)="editClick(dataItem)">Edit</button></td>
+      <td><button type="button" class="btn btn-light mr-1" (click)="deleteClick(dataItem)">Delete</button></td>
 
 
     </tr>

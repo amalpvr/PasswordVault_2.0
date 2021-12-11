@@ -1,45 +1,31 @@
-<div class="modal fade" id="LoginAddForm" tabindex="-1" aria-hidden="true">
-  <div class="modal-dialog modal-dialog-centered">
-    <div class="modal-content">
-        <!-- Login Form -->
-        <form action="">
-          <div class="modal-header">
-            <h5 class="modal-title">Login Details</h5>
-            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-          </div>
 
-
-          <div class="modal-body">
-            <div class="mb-3">
-                <label for="WebsiteName">WebsiteName<span class="text-danger">*</span></label>
-                <input type="text" [(ngModel)]="WebsiteName" [ngModelOptions]="{standalone:true}" class="form-control" id="WebsiteName" placeholder="Enter Website Name">
-            </div>
-
-            <div class="mb-3">
-              <label for="Username">Username<span class="text-danger">*</span></label>
-              <input type="text" [(ngModel)]="Username" [ngModelOptions]="{standalone:true}" class="form-control" id="Username" placeholder="Enter Username">
-          </div>
-
-            <div class="mb-3">
-                <label for="Password">Password<span class="text-danger">*</span></label>
-                <input type="password" [(ngModel)]="Password" [ngModelOptions]="{standalone:true}" class="form-control" id="Password" placeholder="Enter Password">
-            </div>
-
-            <div class="mb-3">
-              <label for="WebsiteUrl">WebsiteUrl<span class="text-danger">*</span></label>
-              <input type="text" [(ngModel)]="WebsiteUrl" [ngModelOptions]="{standalone:true}" class="form-control" id="WebsiteUrl" placeholder="Enter Website Url">
-          </div>
-
-
-          </div>
-          <div class="modal-footer pt-4">
-            <button  class="btn btn-success mx-auto w-100" (click)="addLogin()" 
-             >Save</button>
-            <button class="btn btn-success mx-auto w-100" (click)="updateLogin()"
-            *ngIf="log.Id!=0" >Update</button>
-          </div>
-
-      </form>
-    </div>
+<div class="modal-body">
+  <div class="mb-3">
+      <label for="WebsiteName">WebsiteName<span class="text-danger">*</span></label>
+      <input type="text" [(ngModel)]="WebsiteName" class="form-control" id="WebsiteName" placeholder="Enter Website Name">
   </div>
+
+  <div class="mb-3">
+    <label for="Username">Username<span class="text-danger">*</span></label>
+    <input type="text" [(ngModel)]="Username"  class="form-control" id="Username" placeholder="Enter Username">
 </div>
+
+  <div class="mb-3">
+      <label for="Password">Password<span class="text-danger">*</span></label>
+      <input type="password" [(ngModel)]="Password" [ngModelOptions]="{standalone:true}" class="form-control" id="Password" placeholder="Enter Password">
+  </div>
+
+  <div class="mb-3">
+    <label for="WebsiteUrl">WebsiteUrl<span class="text-danger">*</span></label>
+    <input type="text" [(ngModel)]="WebsiteUrl" [ngModelOptions]="{standalone:true}" class="form-control" id="WebsiteUrl" placeholder="Enter Website Url">
+</div>
+
+
+</div>
+<div class="modal-footer pt-4">
+  <button  class="btn btn-success mx-auto w-100" (click)="addLogin()" *ngIf="log.Id==0"
+   >Save</button>
+  <button class="btn btn-success mx-auto w-100" (click)="updateLogin()"
+  *ngIf="log.Id!=0" >Update</button>
+</div>
+

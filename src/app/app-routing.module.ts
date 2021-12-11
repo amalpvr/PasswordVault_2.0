@@ -1,3 +1,4 @@
+import { DelLogComponent } from './logindetails/del-log/del-log.component';
 import { AddEditLogComponent } from './logindetails/add-edit-log/add-edit-log.component';
 import { LogindetailsComponent } from './logindetails/logindetails.component';
 import { NgModule, Component } from '@angular/core';
@@ -10,7 +11,8 @@ const routes: Routes = [
   {path:'login',component:LogindetailsComponent},
   {path:'carddetails',component:CarddetailsComponent},
   {path:'addlogin',component:AddEditLogComponent},
-  {path:'addcard',component:AddEditCardComponent}
+  {path:'addcard',component:AddEditCardComponent},
+  {path:'editlogin',component:DelLogComponent}
 
 ];
 
